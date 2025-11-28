@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,
+            //スクロール方向を逆転,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -110,6 +110,26 @@
             bindings = <&kp LANGUAGE_2>;
             key-positions = <35 34>;
         };
+
+        rightPAR {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <6 7>;
+        };
+
+        leftPAR {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <3 2>;
+        };
+
+        rightBRA {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <6 5>;
+        };
+
+        leftBRA {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <3 4>;
+        };
     };
 
     behaviors {
@@ -133,10 +153,10 @@
 
         default_layer {
             bindings = <
-&mt Q TAB      &kp W              &kp E               &kp R    &kp T                                       &kp Y        &kp U  &kp I        &kp O          &kp P
-&kp A          &kp S              &kp D               &kp F    &kp G                                       &kp H        &kp J  &kp K        &kp L          &lt 4 MINUS
-&kp Z          &kp X              &kp C               &kp V    &kp B                                       &kp N        &kp M  &kp COMMA    &kp DOT        &kp DEL
-&mt LCTRL ESC  &kp RIGHT_COMMAND  &mt LEFT_ALT GRAVE  &kp INS  &lt 2 ENTER  &kp LEFT_SHIFT    &lt 4 SPACE  &lt 3 SPACE         &lt 5 SLASH  &kp BACKSLASH  &kp ENTER
+&mt Q TAB  &kp W              &kp E               &kp R    &kp T                                       &kp Y        &kp U  &kp I            &kp O      &kp P
+&kp A      &kp S              &kp D               &kp F    &kp G                                       &kp H        &kp J  &kp K            &kp L      &lt 4 MINUS
+&kp Z      &kp X              &kp C               &kp V    &kp B                                       &kp N        &kp M  &kp COMMA        &kp DOT    &kp DEL
+&kp LCTRL  &kp RIGHT_COMMAND  &mt LEFT_ALT GRAVE  &kp INS  &lt 2 ENTER  &kp LEFT_SHIFT    &lt 4 ENTER  &lt 3 SPACE         &lt 5 BACKSLASH  &kp SLASH  &kp ESCAPE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
