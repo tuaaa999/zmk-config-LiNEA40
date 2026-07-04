@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -72,12 +72,12 @@
         };
 
         lang1 {
-            bindings = <&kp LANGUAGE_1>;
+            bindings = <&kp F7>;
             key-positions = <5 6>;
         };
 
         lang2 {
-            bindings = <&kp LANGUAGE_2>;
+            bindings = <&kp F10>;
             key-positions = <15 16>;
         };
 
@@ -123,10 +123,10 @@
 
         default_layer {
             bindings = <
-&mt Q ESCAPE  &kp W             &kp E         &kp R    &kp T                                            &kp Y        &kp U  &kp I            &kp O        &kp P
-&kp A         &kp S             &kp D         &kp F    &kp G                                            &kp H        &kp J  &kp K            &kp L        &kp MINUS
-&kp Z         &kp X             &kp C         &kp V    &kp B                                            &kp N        &kp M  &kp COMMA        &kp DOT      &kp ENTER
-&kp TAB       &kp LEFT_CONTROL  &kp LEFT_ALT  &kp INS  &kp LEFT_COMMAND  &kp LEFT_SHIFT    &lt 2 SPACE  &lt 3 SPACE         &lt 4 BACKSLASH  &lt 5 SLASH  &kp DELETE
+&mt Q ESCAPE    &kp W                    &kp E    &kp R    &kp T                                              &kp Y        &kp U  &kp I                       &kp O                      &kp P
+&kp A           &kp S                    &kp D    &kp F    &kp G                                              &kp H        &kp J  &kp K                       &kp L                      &kp SEMI
+&kp Z           &kp X                    &kp C    &kp V    &kp B                                              &kp N        &kp M  &mt LEFT_PARENTHESIS COMMA  &mt RIGHT_PARENTHESIS DOT  &kp ENTER
+&kp LEFT_SHIFT  &mt LEFT_ALT LANGUAGE_2  &kp TAB  &kp INS  &kp LEFT_COMMAND  &kp LEFT_CONTROL    &lt 2 SPACE  &lt 4 SPACE         &lt 3 BACKSLASH             &lt 5 LANGUAGE_1           &kp DELETE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -143,10 +143,10 @@
 
         MARK {
             bindings = <
-&kp EXCLAMATION  &kp QUESTION  &kp HASH  &kp DOLLAR     &kp PERCENT                    &kp CARET      &kp AMPERSAND      &kp AT_SIGN  &kp EQUAL      &kp MINUS
-&kp TILDE        &trans        &trans    &kp SEMICOLON  &kp COLON                      &kp BACKSPACE  &kp DOUBLE_QUOTES  &kp APOS     &kp PIPE       &trans
-&trans           &trans        &trans    &trans         &trans                         &trans         &trans             &kp SLASH    &kp BACKSLASH  &kp UNDERSCORE
-&trans           &trans        &trans    &trans         &trans       &trans    &trans  &trans                            &trans       &trans         &trans
+&kp EXCLAMATION  &kp QUESTION  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp CARET      &kp AMPERSAND      &kp AT_SIGN       &kp EQUAL          &kp MINUS
+&kp TILDE        &trans        &trans    &trans      &trans                         &kp BACKSPACE  &kp DOUBLE_QUOTES  &kp APOS          &kp PIPE           &kp COLON
+&trans           &trans        &trans    &trans      &trans                         &trans         &kp UNDER          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans           &trans        &trans    &trans      &trans       &trans    &trans  &trans                            &trans            &trans             &trans
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -154,10 +154,10 @@
 
         NUMBER {
             bindings = <
-&kp HOME        &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW  &kp LC(LG(RIGHT_ARROW))  &kp PG_UP                    &kp KP_MULTIPLY  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_PLUS
-&kp END         &kp LEFT_ARROW          &kp DOWN      &kp RIGHT_ARROW          &kp PG_DN                    &kp BACKSPACE    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MINUS
-&kp LEFT_SHIFT  &trans                  &trans        &trans                   &trans                       &kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
-&trans          &trans                  &trans        &trans                   &trans     &trans    &trans  &trans                         &trans        &trans        &trans
+&kp HOME        &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW  &kp LC(LG(RIGHT_ARROW))  &kp PG_UP                    &kp PLUS        &kp MINUS  &kp N7  &kp N8  &kp N9
+&kp END         &kp LEFT_ARROW          &kp DOWN      &kp RIGHT_ARROW          &kp PG_DN                    &kp BACKSPACE   &kp COLON  &kp N4  &kp N5  &kp N6
+&kp LEFT_SHIFT  &trans                  &trans        &trans                   &trans                       &kp UNDERSCORE  &kp N0     &kp N1  &kp N2  &kp N3
+&trans          &trans                  &trans        &trans                   &trans     &trans    &trans  &trans                     &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
